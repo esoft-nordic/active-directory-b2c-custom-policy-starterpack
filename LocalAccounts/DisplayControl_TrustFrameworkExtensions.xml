@@ -69,73 +69,12 @@
     <ContentDefinitions>
       <ContentDefinition Id="api.localaccountsignup">
         <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
-        <LocalizedResourcesReferences MergeBehavior="Prepend">
-          <LocalizedResourcesReference Language="en" LocalizedResourcesReferenceId="api.custom-email.en" />
-          <LocalizedResourcesReference Language="dk" LocalizedResourcesReferenceId="api.custom-email.dk" />
-        </LocalizedResourcesReferences>
       </ContentDefinition>
       <ContentDefinition Id="api.localaccountpasswordreset">
         <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:2.1.2</DataUri>
-        <LocalizedResourcesReferences MergeBehavior="Prepend">
-          <LocalizedResourcesReference Language="en" LocalizedResourcesReferenceId="api.custom-email.en" />
-          <LocalizedResourcesReference Language="dk" LocalizedResourcesReferenceId="api.custom-email.dk" />
-        </LocalizedResourcesReferences>
       </ContentDefinition>
     </ContentDefinitions>
-    <Localization Enabled="true">
-      <SupportedLanguages DefaultLanguage="en" MergeBehavior="Append">
-        <SupportedLanguage>en</SupportedLanguage>
-        <SupportedLanguage>dk</SupportedLanguage>
-      </SupportedLanguages>
-      <LocalizedResources Id="api.custom-email.en">
-        <LocalizedStrings>
-          <!--Email template parameters-->
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_subject">Esoft email verification code</LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_message">Thank you for validating the account</LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_code">Your code is</LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_signature">Sincerely</LocalizedString>
-          <!-- Display control sign-up UI elements-->
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="intro_msg">Verification is necessary. Please click Send button.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="success_send_code_msg">Verification code has been sent to your inbox. Please copy it to the input box below.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="failure_send_code_msg">We are having trouble verifying your email address. Please enter a valid email address and try again.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="success_verify_code_msg">E-mail address verified. You can now continue.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="failure_verify_code_msg">We are having trouble verifying your email address. Please try again.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="but_send_code">Send verification code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="but_verify_code">Verify code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="but_send_new_code">Send new code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationControl" StringId="but_change_claims">Change e-mail</LocalizedString>
-          <!-- Display control password reset UI elements-->
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="intro_msg">Verification is necessary. Please click Send button.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="success_send_code_msg">Verification code has been sent to your inbox. Please copy it to the input box below.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="failure_send_code_msg">We are having trouble verifying your email address. Please enter a valid email address and try again.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="success_verify_code_msg">E-mail address verified. You can now continue.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="failure_verify_code_msg">We are having trouble verifying your email address. Please try again.</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="but_send_code">Send verification code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="but_verify_code">Verify code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="but_send_new_code">Send new code</LocalizedString>
-          <LocalizedString ElementType="DisplayControl" ElementId="emailVerificationSSPRControl" StringId="but_change_claims">Change e-mail</LocalizedString>
-          <!-- Claims-->
-          <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="DisplayName">Verification Code</LocalizedString>
-          <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="UserHelpText">Verification code received in the email.</LocalizedString>
-          <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="AdminHelpText">Verification code received in the email.</LocalizedString>
-          <LocalizedString ElementType="ClaimType" ElementId="email" StringId="DisplayName">Email</LocalizedString>
-          <!-- Email validation error messages-->
-          <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfSessionDoesNotExist">You have exceeded the maximum time allowed.</LocalizedString>
-          <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfMaxRetryAttempted">You have exceeded the number of retries allowed.</LocalizedString>
-          <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfInvalidCode">You have entered the wrong code.</LocalizedString>
-          <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfSessionConflict">Cannot verify the code, please try again later.</LocalizedString>
-          <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfVerificationFailedRetryAllowed">The verification has failed, please try again.</LocalizedString>
-        </LocalizedStrings>
-      </LocalizedResources>
-      <LocalizedResources Id="api.custom-email.dk">
-        <LocalizedStrings>
-          <!-- Email validation error messages-->
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_subject">Esoft email verifikationskode</LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_message">Tak fordi du validerer din konto </LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_code">Din valideringskode er</LocalizedString>
-          <LocalizedString ElementType="GetLocalizedStringsTransformationClaimType" StringId="email_signature">Med venlig hilsen</LocalizedString>
-        </LocalizedStrings>
-      </LocalizedResources>
+    <Localization Enabled="false">
     </Localization>
     <DisplayControls>
       <DisplayControl Id="emailVerificationControl" UserInterfaceControlType="VerificationControl">
